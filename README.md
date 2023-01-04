@@ -47,4 +47,4 @@ Una vez corriendo, podemos ir a la web http://127.0.0.1:5000/ y hacer uso de nue
 
 
 ## Video / Ejemplo
-https://user-images.githubusercontent.com/97620201/210371800-6704799c-f39c-412a-986f-6290c6b3f0bc.mp4
+
