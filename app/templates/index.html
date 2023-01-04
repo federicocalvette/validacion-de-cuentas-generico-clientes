@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+        <link rel="icon" href="{{ url_for('static', filename='img/favicon.png')}}">
+        
+        <script src="{{url_for('static', filename='js/script.js')}}"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <title>Account validation</title>
+
+    </head>
+    <body>
+
+        <div class="navbar">
+            <div class="icon">
+                <img src="{{ url_for('static', filename='img/handy-logo.svg')}}" width=165/>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">DOCUMENTATION</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="content">
+            {% for message in get_flashed_messages() %}
+                <div class="alert">{{ message }}</div>
+            {% endfor %}
+        </div>
+        
+        <div class="content">
+            <div class="main">
+                <div class="left">
+                    <form method="post">
+                        <h2 for="title">Validemos la cuenta!</h2><br>
+
+                        <label for="">Nro de cuenta: </label><br>
+                        <input class="date" type="text" id="numero_cuenta" name="numero_cuenta" placeholder=" 0123456789"><br><br>
+                        
+                        <label for="">Codigo del banco: </label><br>
+                        <input class="date" type="text" id="codigo_banco" name="codigo_banco" placeholder=" 001"><br><br>
+                        
+                        <label for="">Codigo del país: </label><br>
+                        <input class="date" type="text" id="codigo_pais" name="codigo_pais" placeholder=" UY"><br><br>
+
+                        <!--  
+                        <input class="submit" type="submit" value="Consultar">
+                        -->
+                        <input class="submit" type = "button" id = "consultar" value = "Consultar" onclick = "send_data()"/>
+                    </form>
+                </div>
+                <div class="right">
+                    <div class="content_table"> 
+                        <br><br><br>
+                        <h2 style="color: #622bf5;">{{result_msg}}</h2>
+                        <p>{{msg}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
