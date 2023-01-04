@@ -49,7 +49,9 @@ Una vez corriendo, podemos ir a la web http://127.0.0.1:5000/ y hacer uso de nue
 ## Ejemplos
 
 Video
-https://user-images.githubusercontent.com/97620201/210638185-d5229eeb-76ce-4137-a3eb-1767e3dd5440.mp4
+
+https://user-images.githubusercontent.com/97620201/210638512-a27a8b62-c5fe-4e8b-a06e-c46a600fdbae.mp4
+
 
 Imagen
 ![image_example](https://user-images.githubusercontent.com/97620201/210638345-1c4caf77-2b69-462b-9d82-8553717784de.png)
