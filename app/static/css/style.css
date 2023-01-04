@@ -38,13 +38,6 @@
     display: grid;
 }
 
-/*.content_table{
-    width: 100%;
-    margin-top: 100px;
-    display: grid; 
-    padding-top: 7em;
-    padding-left: 20px;
-}*/
 .content_table {
     width: 100%;
     display: grid;
@@ -176,20 +169,6 @@ ul li a {
 
 ul li a:hover {
     color: black;
-}
-
-.download {
-    width: 200px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-color: #E6210A;
-    background-color: #E6210A;
-    color: #FCFEFF;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    text-decoration: none;
-
 }
 
 p {
