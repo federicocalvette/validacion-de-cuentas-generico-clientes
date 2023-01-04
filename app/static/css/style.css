@@ -1,5 +1,11 @@
 @import url('http://fonts.cdnfonts.com/css/dm-sans');
 
+:root {
+    --color_principal: #622bf5;
+    --color_secundario: #eef1ff;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -109,8 +115,8 @@ input{
     line-height: 24px;
 }
 .submit{
-    border-color: #622bf5;
-    background-color: #622bf5;
+    border-color: var(--color_principal);
+    background-color: var(--color_principal);
     color: #FCFEFF;
     font-size: 16px;
     line-height: 24px;
@@ -121,7 +127,7 @@ input{
 .navbar{
     height: 75px;
     margin: auto;
-    background-color: #eef1ff;   
+    background-color: var(--color_secundario);   
 }
 .icon{
     width: 50%;
@@ -151,7 +157,7 @@ ul li{
 ul li a{
     
     text-decoration: none;
-    color: #622bf5;
+    color: var(--color_principal);
     font-weight: bold;
     transition: 0.4s ease-in-out;
 }

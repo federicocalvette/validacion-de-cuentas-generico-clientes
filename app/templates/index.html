@@ -18,7 +18,7 @@
 
         <div class="navbar">
             <div class="icon">
-                <img src="{{ url_for('static', filename='img/handy-logo.svg')}}" width=165/>
+                <img src="{{ url_for('static', filename='img/logo.svg')}}" width=165/>
             </div>
 
             <div class="menu">
@@ -28,12 +28,6 @@
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
-        </div>
-        
-        <div class="content">
-            {% for message in get_flashed_messages() %}
-                <div class="alert">{{ message }}</div>
-            {% endfor %}
         </div>
         
         <div class="content">
@@ -51,19 +45,18 @@
                         <label for="">Codigo del país: </label><br>
                         <input class="date" type="text" id="codigo_pais" name="codigo_pais" placeholder=" UY"><br><br>
 
-                        <!--  
-                        <input class="submit" type="submit" value="Consultar">
-                        -->
                         <input class="submit" type = "button" id = "consultar" value = "Consultar" onclick = "send_data()"/>
                     </form>
                 </div>
+                <!-- 
                 <div class="right">
                     <div class="content_table"> 
                         <br><br><br>
-                        <h2 style="color: #622bf5;">{{result_msg}}</h2>
+                        <h2 style="color: var(--color_principal);">{{result_msg}}</h2>
                         <p>{{msg}}</p>
                     </div>
                 </div>
+                -->
             </div>
         </div>
         
