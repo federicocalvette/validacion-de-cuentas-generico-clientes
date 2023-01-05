@@ -6,14 +6,17 @@ def make_request(nro_cbu, bk_code, country_code):
 
     url = settings.URL
 
-    payload=f'nro_cbu={nro_cbu}&bk_code={bk_code}&country_code={country_code}'
-    
+    payload = f'nro_cbu={nro_cbu}&bk_code={bk_code}&country_code={country_code}'
+
     headers = {
-    'x-api-key': settings.API_KEY,
-    'Content-Type': 'application/x-www-form-urlencoded'
+        'x-api-key': settings.API_KEY,
+        'Content-Type': 'application/x-www-form-urlencoded'
     }
 
-    response = requests.request("POST", url, headers=headers, data=payload)
+    try:
+        response = requests.request("POST", url, headers=headers, data=payload)
+    except Exception as error:
+        return f'Error de tipo exception: {str(error)}'
 
     if response.status_code == 200:
         response_json = response.json()
@@ -33,4 +36,4 @@ def make_request(nro_cbu, bk_code, country_code):
         return message
 
     else:
-        return 'Error'
+        return 'Error inesperado'
