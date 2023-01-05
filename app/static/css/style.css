@@ -1,8 +1,10 @@
 @import url('http://fonts.cdnfonts.com/css/dm-sans');
 
 :root {
-    --color_principal: #622bf5;
-    --color_secundario: #eef1ff;
+    --color_principal: #ffff00;
+    --color_secundario: #ffffaa;
+    --color_letras: #2b2828;
+    --color_letras_secundario: #ffffff;
 }
 
 
@@ -54,12 +56,13 @@ h2 {
     font-size: 35px;
     margin-top: 30px;
     letter-spacing: 2px;
+    color: var(--color_letras);
 }
 
 h3 {
     padding-top: 25px;
     font-size: 28px;
-    color: #495863;
+    color: var(--color_letras);
 }
 
 h4 {
@@ -115,19 +118,27 @@ input {
 }
 
 .submit {
-    border-color: var(--color_principal);
+    margin-top: 10px;
     background-color: var(--color_principal);
-    color: #FCFEFF;
+    color: var(--color_letras);
+    font-weight: bold;
     font-size: 16px;
     line-height: 24px;
+    border-color: var(--color_letras);
+    /*border: none;*/
 }
 
+.submit:hover {
+    color: var(--color_letras_secundario);
+    cursor:pointer;
+}
 
 /*Barra superior*/
 .navbar {
     height: 75px;
     margin: auto;
     background-color: var(--color_secundario);
+    border-bottom: 1px solid black;
 }
 
 .icon {
@@ -162,13 +173,14 @@ ul li {
 ul li a {
 
     text-decoration: none;
-    color: var(--color_principal);
+    color: var(--color_letras);
     font-weight: bold;
     transition: 0.4s ease-in-out;
 }
 
 ul li a:hover {
-    color: black;
+    color: var(--color_letras_secundario);
+    cursor:pointer;
 }
 
 p {
