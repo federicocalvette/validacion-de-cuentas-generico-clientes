@@ -18,22 +18,34 @@ def make_request(nro_cbu, bk_code, country_code):
     except Exception as error:
         return f'Error de tipo exception: {str(error)}'
 
+    message = ''
+    
+    data_response = {
+        'hasName': False,
+        'name': '',
+        'message': ''
+    }
+
     if response.status_code == 200:
         response_json = response.json()
-        name = response_json['data']['beneficiary_name']
-        return name
+        data_response['name'] = response_json['data']['beneficiary_name']
+        data_response['hasName'] = True
+        return data_response
 
     elif response.status_code == 404:
         message = "Cuenta credito invalida"
-        return message
 
     elif response.status_code == 503:
         message = "Error de comunicacion con el banco"
-        return message
 
     elif response.status_code == 400:
         message = f"Parametros invalidos -> {str(response.json())}"
-        return message
 
     else:
-        return 'Error inesperado'
+        message = 'Error inesperado'
+
+    data_response['message'] = message
+    data_response['hasName'] = False
+    data_response['name'] = ''
+
+    return data_response
