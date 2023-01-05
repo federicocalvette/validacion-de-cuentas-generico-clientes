@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, flash, redirect, send_from_directory
+from flask import Flask, render_template, request
 import prometeo_request
 import settings
 
