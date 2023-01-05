@@ -51,8 +51,11 @@ Una vez corriendo, podemos ir a la web http://127.0.0.1:5000/ y hacer uso de nue
 
 Video
 
-https://user-images.githubusercontent.com/97620201/210638512-a27a8b62-c5fe-4e8b-a06e-c46a600fdbae.mp4
+https://user-images.githubusercontent.com/97620201/210805261-a82167f0-9ee4-4a8d-b828-c99c2e309e5d.mp4
 
 
-Imagen
-![image_example](https://user-images.githubusercontent.com/97620201/210638345-1c4caf77-2b69-462b-9d82-8553717784de.png)
+Imagenes
+![image (4)](https://user-images.githubusercontent.com/97620201/210805072-cf128c68-9100-4956-9962-fbfb106df5cd.png)
+![image (2)](https://user-images.githubusercontent.com/97620201/210804964-c4663837-5365-4400-bb1e-f23b89fa2f49.png)
+![image (3)](https://user-images.githubusercontent.com/97620201/210804978-11f5af20-11e7-4cdd-b7b8-d59f01dc3c75.png)
+
