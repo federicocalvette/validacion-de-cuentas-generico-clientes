@@ -3,7 +3,7 @@
 :root {
     --color_principal: #ffff00;
     --color_secundario: #ffffaa;
-    --color_letras: #2b2828;
+    --color_letras_principal: #2b2828;
     --color_letras_secundario: #ffffff;
 }
 
@@ -56,13 +56,13 @@ h2 {
     font-size: 35px;
     margin-top: 30px;
     letter-spacing: 2px;
-    color: var(--color_letras);
+    color: var(--color_letras_principal);
 }
 
 h3 {
     padding-top: 25px;
     font-size: 28px;
-    color: var(--color_letras);
+    color: var(--color_letras_principal);
 }
 
 h4 {
@@ -120,11 +120,11 @@ input {
 .submit {
     margin-top: 10px;
     background-color: var(--color_principal);
-    color: var(--color_letras);
+    color: var(--color_letras_principal);
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
-    border-color: var(--color_letras);
+    border-color: var(--color_letras_principal);
     /*border: none;*/
 }
 
@@ -173,7 +173,7 @@ ul li {
 ul li a {
 
     text-decoration: none;
-    color: var(--color_letras);
+    color: var(--color_letras_principal);
     font-weight: bold;
     transition: 0.4s ease-in-out;
 }
