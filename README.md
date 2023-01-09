@@ -3,27 +3,27 @@
 ## Primeros pasos
 
 Creo mi environment
-```
+```bash
 python3 -m venv env
 ```
 
 Activo el environment que cree
-```
+```bash
 source env/bin/activate
 ```
 
 Instalo las dependencias 
-```
+```bash
 pip install -r requirements.txt
 ```
 
 Ingreso a la carpeta de la APP
-```
+```bash
 cd app
 ```
 
 Cambio el nombre de settings_exaples.py a settings.py
-```
+```bash
 mv settings_example.py settings.py 
 ```
 
@@ -32,15 +32,15 @@ Debo pegar mi API Key de Prometeo en la variable API_KEY de settings.py
 Y generar una SECRET_KEY para la app de Flask, por ejemplo df0331cefc6c2b9a5d0208a726a5d1c0fd37324feba25506
 
 Seteo las variables
-```
+```bash
 export FLASK_APP=app
 ```
-```
+```bash
 export FLASK_ENV=development
 ```
 
 Corro la APP
-```
+```bash
 flask run
 ```
 Una vez corriendo, podemos ir a la web http://127.0.0.1:5000/ y hacer uso de nuestra demo (:
