@@ -44,8 +44,7 @@ Corro la APP
 flask run
 ```
 Una vez corriendo, podemos ir a la web http://127.0.0.1:5000/ y hacer uso de nuestra demo (:
-
-
+<br /><br /><br />
 ## Personaliza la demo con el aspecto de tu empresa! 
 ###### Logo y Favicon
 Cambia el logo que se encuentra en el directorio: */validacion-de-cuentas-generico-clientes/app/static/img/* con el nombre **logo.png** por el de tu empresa. Y realiza el mismo procedimiento para **favicon.png**.
@@ -61,9 +60,7 @@ Para personalizar los colores de la demo a unos que se apeguen más a los que re
 }
 ```
 que se encuentran en el archivo **style.css**, del directorio */validacion-de-cuentas-generico-clientes/app/static/css/*
-
-
-
+<br /><br /><br />
 ## Ejemplos
 
 ###### Video
