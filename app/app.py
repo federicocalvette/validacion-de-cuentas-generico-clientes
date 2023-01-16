@@ -57,3 +57,7 @@ def validation():
 
         else:
             return 'Error interno'
+
+
+if __name__ == '__main__':
+    app.run(debug=True, port=settings.PORT)
