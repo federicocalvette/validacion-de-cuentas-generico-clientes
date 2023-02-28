@@ -1,6 +1,10 @@
+import bank_codes
 from flask import Flask, render_template, request
 import prometeo_request
 import settings
+
+BANK_NAME = bank_codes.BANK_CODES
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = settings.SECRET_KEY
@@ -44,13 +48,15 @@ def validation():
         # Si pasa el control de parametros llamo a make_request de prometeo_request, enviando los parametros de numero_cuenta, codigo_banco, codigo_pais.
         # Una vez obtengo la respuesta la guardo en response_request y procedo a enviar el mensaje al front, en funcion de la respuesta obtenida.
         response_request = prometeo_request.make_request(numero_cuenta, codigo_banco, codigo_pais)
-
-        print(type(response_request))
+        print(response_request)
 
         if type(response_request) is dict:
 
             if response_request['hasName']:
-                return f'El titular de la cuenta bancaria {numero_cuenta} se llama: {response_request["name"]}.'
+                if codigo_pais == 'UY':
+                    return f'El titular de la cuenta {numero_cuenta} de {BANK_NAME[codigo_banco]}, se llama: {response_request["name"]}.'
+                else:
+                    return f'El titular de la cuenta {numero_cuenta} se llama: {response_request["name"]}.'
 
             else:
                 return response_request['message']
