@@ -20,7 +20,7 @@ function send_data() {
     .then((response) => response.text())
     .then(function (response) {
       console.log(response);
-      if (response.includes('El titular de la cuenta bancaria')) {
+      if (response.includes('El titular de la cuenta')) {
         swal("", response, "success");
       }
       else {
