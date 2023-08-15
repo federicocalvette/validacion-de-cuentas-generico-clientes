@@ -54,7 +54,7 @@ def validation():
 
             if response_request['hasName']:
                 if codigo_pais == 'UY':
-                    return f'El titular de la cuenta {numero_cuenta} de {BANK_NAME[codigo_banco]}, se llama: {response_request["name"]}.'
+                    return f'El titular de la cuenta {numero_cuenta} en {response_request["currency"]} de {BANK_NAME[codigo_banco]}, se llama: {response_request["name"]}.'
                 else:
                     return f'El titular de la cuenta {numero_cuenta} se llama: {response_request["name"]}.'
 

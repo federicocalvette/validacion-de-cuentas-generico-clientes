@@ -23,13 +23,15 @@ def make_request(nro_cbu, bk_code, country_code):
     data_response = {
         'hasName': False,
         'name': '',
-        'message': ''
+        'message': '',
+        'currency': ''
     }
 
     if response.status_code == 200:
         response_json = response.json()
         data_response['name'] = response_json['data']['beneficiary_name']
         data_response['hasName'] = True
+        data_response['currency'] = response_json["data"]["account_currency"]
         return data_response
 
     elif response.status_code == 404:
@@ -47,5 +49,6 @@ def make_request(nro_cbu, bk_code, country_code):
     data_response['message'] = message
     data_response['hasName'] = False
     data_response['name'] = ''
+    data_response['currency'] = ''
 
     return data_response
