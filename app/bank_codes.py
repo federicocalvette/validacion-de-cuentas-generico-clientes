@@ -19,4 +19,5 @@ BANK_CODES = {
     "622": "CAJA BANCARIA",
     "452": "PREX",
     "815": "OCA BLUE",
+    "6917": "MI DINERO"
 }
